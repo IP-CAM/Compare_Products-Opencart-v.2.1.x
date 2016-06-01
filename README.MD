@@ -27,10 +27,8 @@ MIT
 #### Screenshots
 ![Back-end Demo](https://github.com/p0v1n0m/opencart_compare_products/blob/master/screenshots/01.png)
 
-![Back-end Demo](https://github.com/p0v1n0m/opencart_compare_products/blob/master/screenshots/02.png)
+![Front-end Demo](https://github.com/p0v1n0m/opencart_compare_products/blob/master/screenshots/02.png)
 
 ![Front-end Demo](https://github.com/p0v1n0m/opencart_compare_products/blob/master/screenshots/03.png)
 
 ![Front-end Demo](https://github.com/p0v1n0m/opencart_compare_products/blob/master/screenshots/04.png)
-
-![Front-end Demo](https://github.com/p0v1n0m/opencart_compare_products/blob/master/screenshots/05.png)

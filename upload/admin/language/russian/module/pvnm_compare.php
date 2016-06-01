@@ -1,6 +1,6 @@
 <?php
 // Heading
-$_['heading_title']       = 'Товары в сравнении';
+$_['heading_title']       = 'Compare Products';
 
 // Tab
 $_['tab_settings']        = 'Настройки';
@@ -10,6 +10,8 @@ $_['tab_help']       	  = 'Помощь';
 $_['text_module']         = 'Модули';
 $_['text_success']        = 'Настройки модуля обновлены!';
 $_['text_edit']       	  = 'Настройки модуля';
+$_['text_documentation']  = 'Документация';
+$_['text_developer']      = 'Разработчик';
 $_['text_width']   	 	  = 'Ширина';
 $_['text_height'] 		  = 'Высота';
 $_['text_limit']   		  = 'Лимит';

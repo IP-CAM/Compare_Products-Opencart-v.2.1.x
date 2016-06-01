@@ -18,10 +18,11 @@ class ControllerModulePvnmCompare extends Controller {
 		}
 
 		$data['heading_title'] = $this->language->get('heading_title');
-
 		$data['tab_settings'] = $this->language->get('tab_settings');
 		$data['tab_help'] = $this->language->get('tab_help');
 		$data['text_edit'] = $this->language->get('text_edit');
+		$data['text_documentation'] = $this->language->get('text_documentation');
+		$data['text_developer'] = $this->language->get('text_developer');
 		$data['text_enabled'] = $this->language->get('text_enabled');
 		$data['text_disabled'] = $this->language->get('text_disabled');
 		$data['text_yes'] = $this->language->get('text_yes');
@@ -82,7 +83,6 @@ class ControllerModulePvnmCompare extends Controller {
 		);
 
 		$data['action'] = $this->url->link('module/pvnm_compare', 'token=' . $this->session->data['token'], 'SSL');
-
 		$data['cancel'] = $this->url->link('extension/module', 'token=' . $this->session->data['token'], 'SSL');
 
 		if (isset($this->request->post['pvnm_compare_status'])) {
