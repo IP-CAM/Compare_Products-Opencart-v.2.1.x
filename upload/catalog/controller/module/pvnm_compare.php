@@ -6,7 +6,7 @@ class ControllerModulePvnmCompare extends Controller {
 		$this->load->model('catalog/product');
 		$this->load->model('tool/image');
 
-    	$data['heading_title'] = $this->language->get('heading_title');
+		$data['heading_title'] = $this->language->get('heading_title');
 		$data['text_manufacturer'] = $this->language->get('text_manufacturer');
 		$data['text_model'] = $this->language->get('text_model');
 		$data['text_reward'] = $this->language->get('text_reward');
@@ -17,18 +17,18 @@ class ControllerModulePvnmCompare extends Controller {
 		$data['text_tags'] = $this->language->get('text_tags');
 		$data['text_tax'] = $this->language->get('text_tax');
 		$data['text_compare'] = $this->language->get('text_compare');
-    	$data['text_clear'] = $this->language->get('text_clear');
+		$data['text_clear'] = $this->language->get('text_clear');
 		$data['text_empty'] = $this->language->get('text_empty');
 		$data['button_cart'] = $this->language->get('button_cart');
 		$data['button_wishlist'] = $this->language->get('button_wishlist');
 		$data['button_compare'] = $this->language->get('button_compare');
 		$data['button_remove_compare'] = $this->language->get('button_remove_compare');
 
-        $data['compare'] = $this->url->link('product/compare');
+		$data['compare'] = $this->url->link('product/compare');
 		$data['show_box'] = $this->config->get('pvnm_compare_show_box');
 		$data['show_button'] = $this->config->get('pvnm_compare_show_button');
 
-        if (isset($this->session->data['compare']) && (count($this->session->data['compare']) > 0)){
+		if (isset($this->session->data['compare']) && (count($this->session->data['compare']) > 0)){
 			$data['products'] = array();
 
 			$data['results'] = array();
@@ -159,24 +159,24 @@ class ControllerModulePvnmCompare extends Controller {
 				}
 
 				$data['products'][] = array(
-					'product_id' 		=> $result['product_id'],
-					'name'    	 		=> $result['name'],
-					'href'    			=> $this->url->link('product/product', 'product_id=' . $result['product_id']),
-					'thumb'   	 		=> $image,
-					'manufacturer' 		=> $manufacturer,
+					'product_id'        => $result['product_id'],
+					'name'              => $result['name'],
+					'href'              => $this->url->link('product/product', 'product_id=' . $result['product_id']),
+					'thumb'             => $image,
+					'manufacturer'      => $manufacturer,
 					'manufacturer_href' => $manufacturer_href,
-					'model' 			=> $model,
-					'reward'			=> $reward,
-					'stock'				=> $stock,
-					'weight'      		=> $weight,
-					'dimensions'       	=> $dimensions,
-					'rating'    		=> $rating,
-					'description' 		=> $description,
-					'attributes'    	=> $attributes,
-					'tags'				=> $tags,
-					'price'   	 		=> $price,
-					'special' 	 		=> $special,
-					'tax'       		=> $tax
+					'model'             => $model,
+					'reward'            => $reward,
+					'stock'             => $stock,
+					'weight'            => $weight,
+					'dimensions'        => $dimensions,
+					'rating'            => $rating,
+					'description'       => $description,
+					'attributes'        => $attributes,
+					'tags'              => $tags,
+					'price'             => $price,
+					'special'           => $special,
+					'tax'               => $tax
 				);
 			}
 		}
@@ -188,7 +188,7 @@ class ControllerModulePvnmCompare extends Controller {
 		}
 	}
 
-    public function remove() {
+	public function remove() {
 		$this->load->language('module/pvnm_compare');
 
 		if (isset($this->session->data['compare'])) {
@@ -208,9 +208,9 @@ class ControllerModulePvnmCompare extends Controller {
 		$json['count'] = count($this->session->data['compare']);
 
 		$this->response->setOutput(json_encode($json));
-    }
+	}
 
-    public function clear() {
+	public function clear() {
 		$this->load->language('module/pvnm_compare');
 
 		$this->session->data['compare'] = array();
@@ -220,7 +220,7 @@ class ControllerModulePvnmCompare extends Controller {
 		$json['success'] = $this->language->get('text_empty');
 
 		$this->response->setOutput(json_encode($json));
-    }
+	}
 
 	public function info() {
 		$this->response->setOutput($this->index());

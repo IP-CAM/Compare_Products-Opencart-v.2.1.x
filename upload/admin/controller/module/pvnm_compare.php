@@ -65,17 +65,17 @@ class ControllerModulePvnmCompare extends Controller {
 			$data['success'] = '';
 		}
 
-  		$data['breadcrumbs'] = array();
+		$data['breadcrumbs'] = array();
 
-   		$data['breadcrumbs'][] = array(
-       		'text' => $this->language->get('text_home'),
+		$data['breadcrumbs'][] = array(
+			'text' => $this->language->get('text_home'),
 			'href' => $this->url->link('common/dashboard', 'token=' . $this->session->data['token'], 'SSL')
-   		);
+		);
 
-   		$data['breadcrumbs'][] = array(
-       		'text' => $this->language->get('text_module'),
+		$data['breadcrumbs'][] = array(
+			'text' => $this->language->get('text_module'),
 			'href' => $this->url->link('extension/module', 'token=' . $this->session->data['token'], 'SSL')
-   		);
+		);
 
 		$data['breadcrumbs'][] = array(
 			'text' => $this->language->get('heading_title'),
@@ -217,10 +217,10 @@ class ControllerModulePvnmCompare extends Controller {
 	}
 
 	protected function validate() {
-        if (!$this->user->hasPermission('modify', 'module/pvnm_compare')) {
-            $this->error['warning'] = $this->language->get('error_permission');
-        }
+		if (!$this->user->hasPermission('modify', 'module/pvnm_compare')) {
+			$this->error['warning'] = $this->language->get('error_permission');
+		}
 
 		return !$this->error;
-    }
+	}
 }
